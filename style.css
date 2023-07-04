@@ -94,7 +94,7 @@ body * {
     transform: translateY(-50%);
 }
 .light #switch button{
-    animation: slide-in 0.4s;
+    animation: slide-in 0.4s forwards;
 }
 
 #switch span{
@@ -176,7 +176,7 @@ footer{
         --bg-url: url(./asstesya/bg-desktop.jpg);
     }
     .light {
-        --bg-url:url(./asstesya/bg-desktop.jpg);
+        --bg-url:url(./asstesya/bg-desktop-light.jpg);
     }
     /*animation*/
     @keyframes slide-in{
@@ -184,7 +184,15 @@ footer{
         right: 0;}
        to{
         left:50%;
-       }
-        
+       }     
+    }
+
+    @keyframes slide-back {
+        from{
+            left:50%;
+        }
+        to{
+            right:0;
+        }
     }
 }
